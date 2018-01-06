@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA509861200064F800009401 /* SIXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = EA509860200064F800009401 /* SIXRuntime.m */; };
+		EA5423AE1FFCCA9700891C63 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5423AD1FFCCA9700891C63 /* Student.m */; };
 		EAEF6E8D1F4497140089827F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEF6E8C1F4497140089827F /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA50985F200064F800009401 /* SIXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIXRuntime.h; sourceTree = "<group>"; };
+		EA509860200064F800009401 /* SIXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIXRuntime.m; sourceTree = "<group>"; };
+		EA5423AC1FFCCA9700891C63 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		EA5423AD1FFCCA9700891C63 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		EAEF6E891F4497140089827F /* FoundationOC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FoundationOC; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAEF6E8C1F4497140089827F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				EAEF6E8C1F4497140089827F /* main.m */,
+				EA5423AC1FFCCA9700891C63 /* Student.h */,
+				EA5423AD1FFCCA9700891C63 /* Student.m */,
+				EA50985F200064F800009401 /* SIXRuntime.h */,
+				EA509860200064F800009401 /* SIXRuntime.m */,
 			);
 			path = FoundationOC;
 			sourceTree = "<group>";
@@ -120,7 +130,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA509861200064F800009401 /* SIXRuntime.m in Sources */,
 				EAEF6E8D1F4497140089827F /* main.m in Sources */,
+				EA5423AE1FFCCA9700891C63 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +263,7 @@
 				EAEF6E921F4497140089827F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
