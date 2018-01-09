@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA410B4B2004E1A90092C9BF /* MessageForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = EA410B4A2004E1A90092C9BF /* MessageForwarding.m */; };
 		EA509861200064F800009401 /* SIXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = EA509860200064F800009401 /* SIXRuntime.m */; };
 		EA5423AE1FFCCA9700891C63 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5423AD1FFCCA9700891C63 /* Student.m */; };
 		EAEF6E8D1F4497140089827F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEF6E8C1F4497140089827F /* main.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA410B492004E1A90092C9BF /* MessageForwarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageForwarding.h; sourceTree = "<group>"; };
+		EA410B4A2004E1A90092C9BF /* MessageForwarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageForwarding.m; sourceTree = "<group>"; };
 		EA50985F200064F800009401 /* SIXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIXRuntime.h; sourceTree = "<group>"; };
 		EA509860200064F800009401 /* SIXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIXRuntime.m; sourceTree = "<group>"; };
 		EA5423AC1FFCCA9700891C63 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -44,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA410B482004E1380092C9BF /* property解析 */ = {
+			isa = PBXGroup;
+			children = (
+				EA5423AC1FFCCA9700891C63 /* Student.h */,
+				EA5423AD1FFCCA9700891C63 /* Student.m */,
+				EA50985F200064F800009401 /* SIXRuntime.h */,
+				EA509860200064F800009401 /* SIXRuntime.m */,
+			);
+			path = "property解析";
+			sourceTree = "<group>";
+		};
+		EA410B4C2004E1B10092C9BF /* 消息转发 */ = {
+			isa = PBXGroup;
+			children = (
+				EA410B492004E1A90092C9BF /* MessageForwarding.h */,
+				EA410B4A2004E1A90092C9BF /* MessageForwarding.m */,
+			);
+			path = "消息转发";
+			sourceTree = "<group>";
+		};
 		EAEF6E801F4497140089827F = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				EAEF6E8C1F4497140089827F /* main.m */,
-				EA5423AC1FFCCA9700891C63 /* Student.h */,
-				EA5423AD1FFCCA9700891C63 /* Student.m */,
-				EA50985F200064F800009401 /* SIXRuntime.h */,
-				EA509860200064F800009401 /* SIXRuntime.m */,
+				EA410B4C2004E1B10092C9BF /* 消息转发 */,
+				EA410B482004E1380092C9BF /* property解析 */,
 			);
 			path = FoundationOC;
 			sourceTree = "<group>";
@@ -132,6 +153,7 @@
 			files = (
 				EA509861200064F800009401 /* SIXRuntime.m in Sources */,
 				EAEF6E8D1F4497140089827F /* main.m in Sources */,
+				EA410B4B2004E1A90092C9BF /* MessageForwarding.m in Sources */,
 				EA5423AE1FFCCA9700891C63 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

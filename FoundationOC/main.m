@@ -8,13 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "Student.h"
+#import "MessageForwarding.h"
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
         
-        [Student printTestInfo];
+        //消息转发解析
+        [MessageForwarding printTestInfo];
+    
+        
+        //property解析
+//        [Student printTestInfo];
     }
     return 0;
 }
