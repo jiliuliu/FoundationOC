@@ -10,6 +10,21 @@
 #import <objc/runtime.h>
 
 /*
+ 消息派发
+ 
+ id returnValue = [someObject messageName:parameter];
+ Id returnValue = objc_msgSend(someObject, @selector(messageName:), parameter);
+ 
+ objc_msgSend函数会在类中搜索方法列表，找到就跳转方法实现，否则沿着继承体系继续往上找，最终找不到就执行消息转发
+ objc_msgSend会将匹配结果缓存在快速映射表中，对比静态绑定的函数调用操作
+ 
+ struct objc_method {
+     SEL method_name;
+     char *method_types;
+     IMP method_imp;
+ }
+ 
+ 
  消息转发
  
  在本类和父类中都找不到此方法，就执行消息转发。
@@ -35,30 +50,35 @@
 
 + (void)printTestInfo {
     MessageForwarding *stu = [MessageForwarding new];
+    stu.obj = [SomeObject new];
     //分别注释几个方法来分析
     [stu studying];
     [stu eat];
     [stu watchTV];
 }
 
+//1.类在收到无法解读的消息后，调用
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     NSLog(@"resolveInstanceMethod:%@", NSStringFromSelector(sel));
     if ([NSStringFromSelector(sel) isEqualToString:@"studying"]) {
         SEL newSel = @selector(study);
-        class_addMethod(self, sel, (IMP)class_getMethodImplementation(self, newSel), "v@");
+        Method method = class_getInstanceMethod(self, newSel);
+        class_addMethod(self, sel, method_getImplementation(method), method_getTypeEncoding(method));
         return YES;
     }
     return [super resolveInstanceMethod:sel];
 }
 
+// 2.备援接受者，把消息转给其它对象来处理
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     NSLog(@"forwardingTargetForSelector:%@", NSStringFromSelector(aSelector));
     if ([NSStringFromSelector(aSelector) isEqualToString:@"eat"]) {
-        return [SomeObject new];
+        return self.obj;
     }
     return [super forwardingTargetForSelector:aSelector];
 }
 
+//3.系统把消息封装成NSInvocation对象中，再给接收者发过去。
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
     NSLog(@"methodSignatureForSelector:%@", NSStringFromSelector(aSelector));
     NSMethodSignature *ms = [super methodSignatureForSelector:aSelector];
@@ -68,18 +88,14 @@
     return ms;
 }
 
+//3.系统把消息封装成NSInvocation对象中，再给接收者发过去。
 // 处理转发的消息，进入此方法，就不会产生崩溃
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
     NSLog(@"forwardInvocation:%@", NSStringFromSelector(anInvocation.selector));
     if (anInvocation) {
-        if (!self.obj) {
-            self.obj = [SomeObject new];
-        }
-        
         [anInvocation invokeWithTarget:self.obj];
     }
 }
-
 
 - (void)study {
     NSLog(@"正在读书");

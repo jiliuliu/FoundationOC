@@ -70,6 +70,14 @@
 
 /** 替换实例方法实现 */
 + (void)six_swizzleMethods:(Class)cla originalSelector:(SEL)origSel swizzledSelector:(SEL)swizSel {
+    //适配类方法的情况
+    if (![cla instancesRespondToSelector:swizSel]) {
+        cla = object_getClass(cla);
+        if (![cla instancesRespondToSelector:swizSel]) {
+            return;
+        }
+    }
+    
     Method origMethod = class_getInstanceMethod(cla, origSel);
     Method swizMethod = class_getInstanceMethod(cla, swizSel);
     

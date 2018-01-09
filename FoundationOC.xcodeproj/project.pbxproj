@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EA410B4B2004E1A90092C9BF /* MessageForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = EA410B4A2004E1A90092C9BF /* MessageForwarding.m */; };
+		EA410B502004EC120092C9BF /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = EA410B4F2004EC120092C9BF /* Animal.m */; };
+		EA410B532004EC350092C9BF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = EA410B522004EC350092C9BF /* Person.m */; };
 		EA509861200064F800009401 /* SIXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = EA509860200064F800009401 /* SIXRuntime.m */; };
 		EA5423AE1FFCCA9700891C63 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5423AD1FFCCA9700891C63 /* Student.m */; };
 		EAEF6E8D1F4497140089827F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEF6E8C1F4497140089827F /* main.m */; };
@@ -28,6 +30,10 @@
 /* Begin PBXFileReference section */
 		EA410B492004E1A90092C9BF /* MessageForwarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageForwarding.h; sourceTree = "<group>"; };
 		EA410B4A2004E1A90092C9BF /* MessageForwarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageForwarding.m; sourceTree = "<group>"; };
+		EA410B4E2004EC120092C9BF /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		EA410B4F2004EC120092C9BF /* Animal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		EA410B512004EC350092C9BF /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		EA410B522004EC350092C9BF /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		EA50985F200064F800009401 /* SIXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIXRuntime.h; sourceTree = "<group>"; };
 		EA509860200064F800009401 /* SIXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIXRuntime.m; sourceTree = "<group>"; };
 		EA5423AC1FFCCA9700891C63 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -52,8 +58,6 @@
 			children = (
 				EA5423AC1FFCCA9700891C63 /* Student.h */,
 				EA5423AD1FFCCA9700891C63 /* Student.m */,
-				EA50985F200064F800009401 /* SIXRuntime.h */,
-				EA509860200064F800009401 /* SIXRuntime.m */,
 			);
 			path = "property解析";
 			sourceTree = "<group>";
@@ -65,6 +69,19 @@
 				EA410B4A2004E1A90092C9BF /* MessageForwarding.m */,
 			);
 			path = "消息转发";
+			sourceTree = "<group>";
+		};
+		EA410B4D2004E88D0092C9BF /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				EA50985F200064F800009401 /* SIXRuntime.h */,
+				EA509860200064F800009401 /* SIXRuntime.m */,
+				EA410B4E2004EC120092C9BF /* Animal.h */,
+				EA410B4F2004EC120092C9BF /* Animal.m */,
+				EA410B512004EC350092C9BF /* Person.h */,
+				EA410B522004EC350092C9BF /* Person.m */,
+			);
+			path = runtime;
 			sourceTree = "<group>";
 		};
 		EAEF6E801F4497140089827F = {
@@ -87,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				EAEF6E8C1F4497140089827F /* main.m */,
+				EA410B4D2004E88D0092C9BF /* runtime */,
 				EA410B4C2004E1B10092C9BF /* 消息转发 */,
 				EA410B482004E1380092C9BF /* property解析 */,
 			);
@@ -151,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA410B532004EC350092C9BF /* Person.m in Sources */,
 				EA509861200064F800009401 /* SIXRuntime.m in Sources */,
 				EAEF6E8D1F4497140089827F /* main.m in Sources */,
+				EA410B502004EC120092C9BF /* Animal.m in Sources */,
 				EA410B4B2004E1A90092C9BF /* MessageForwarding.m in Sources */,
 				EA5423AE1FFCCA9700891C63 /* Student.m in Sources */,
 			);
