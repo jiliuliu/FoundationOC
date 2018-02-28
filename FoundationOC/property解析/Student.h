@@ -47,7 +47,7 @@
 
 /**
  @synthesize emil;
- 生成属性sex的成员变量emil（注意没有下划线）和setter、getter方法的实现
+ 生成属性emil的成员变量emil（注意没有下划线）和setter、getter方法的实现
  */
 @property (nonatomic, strong) NSString *emil;
 

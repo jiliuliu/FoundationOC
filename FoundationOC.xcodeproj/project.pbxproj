@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA3C3FA52046521900D604FF /* ARC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3C3FA42046521900D604FF /* ARC.m */; };
+		EA3C3FA82046620700D604FF /* NARC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3C3FA72046620700D604FF /* NARC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EA410B4B2004E1A90092C9BF /* MessageForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = EA410B4A2004E1A90092C9BF /* MessageForwarding.m */; };
 		EA410B502004EC120092C9BF /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = EA410B4F2004EC120092C9BF /* Animal.m */; };
 		EA410B532004EC350092C9BF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = EA410B522004EC350092C9BF /* Person.m */; };
@@ -28,6 +30,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA3C3FA32046521900D604FF /* ARC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARC.h; sourceTree = "<group>"; };
+		EA3C3FA42046521900D604FF /* ARC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARC.m; sourceTree = "<group>"; };
+		EA3C3FA62046620700D604FF /* NARC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NARC.h; sourceTree = "<group>"; };
+		EA3C3FA72046620700D604FF /* NARC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NARC.m; sourceTree = "<group>"; };
 		EA410B492004E1A90092C9BF /* MessageForwarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageForwarding.h; sourceTree = "<group>"; };
 		EA410B4A2004E1A90092C9BF /* MessageForwarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageForwarding.m; sourceTree = "<group>"; };
 		EA410B4E2004EC120092C9BF /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
@@ -53,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA3C3FA22046516800D604FF /* 内存管理 */ = {
+			isa = PBXGroup;
+			children = (
+				EA3C3FA32046521900D604FF /* ARC.h */,
+				EA3C3FA42046521900D604FF /* ARC.m */,
+				EA3C3FA62046620700D604FF /* NARC.h */,
+				EA3C3FA72046620700D604FF /* NARC.m */,
+			);
+			path = "内存管理";
+			sourceTree = "<group>";
+		};
 		EA410B482004E1380092C9BF /* property解析 */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				EAEF6E8C1F4497140089827F /* main.m */,
+				EA3C3FA22046516800D604FF /* 内存管理 */,
 				EA410B4D2004E88D0092C9BF /* runtime */,
 				EA410B4C2004E1B10092C9BF /* 消息转发 */,
 				EA410B482004E1380092C9BF /* property解析 */,
@@ -172,7 +190,9 @@
 				EA410B532004EC350092C9BF /* Person.m in Sources */,
 				EA509861200064F800009401 /* SIXRuntime.m in Sources */,
 				EAEF6E8D1F4497140089827F /* main.m in Sources */,
+				EA3C3FA52046521900D604FF /* ARC.m in Sources */,
 				EA410B502004EC120092C9BF /* Animal.m in Sources */,
+				EA3C3FA82046620700D604FF /* NARC.m in Sources */,
 				EA410B4B2004E1A90092C9BF /* MessageForwarding.m in Sources */,
 				EA5423AE1FFCCA9700891C63 /* Student.m in Sources */,
 			);

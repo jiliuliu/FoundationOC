@@ -68,7 +68,13 @@
     return arr.copy;
 }
 
-/** 替换实例方法实现 */
+/** 替换方法实现
+ struct objc_method {
+     SEL method_name;
+     char *method_types;
+     IMP method_imp;
+ }
+ */
 + (void)six_swizzleMethods:(Class)cla originalSelector:(SEL)origSel swizzledSelector:(SEL)swizSel {
     //适配类方法的情况
     if (![cla instancesRespondToSelector:swizSel]) {
@@ -79,11 +85,13 @@
     }
     
     Method origMethod = class_getInstanceMethod(cla, origSel);
-    Method swizMethod = class_getInstanceMethod(cla, swizSel);
+    Method  swizMethod = class_getInstanceMethod(cla, swizSel);
     
+    //添加方法
     //class_addMethod will fail if original method already exists
     BOOL didAddMethod = class_addMethod(cla, origSel, method_getImplementation(swizMethod), method_getTypeEncoding(swizMethod));
     if (didAddMethod) {
+        //修改struct objc_method 的成员
         class_replaceMethod(cla, swizSel, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
     } else {
         //origMethod and swizMethod already exist
@@ -91,10 +99,6 @@
     }
 }
 
-/** 替换类方法实现 */
-+ (void)six_swizzleClassMethods:(Class)cla originalSelector:(SEL)origSel swizzledSelector:(SEL)swizSel {
-    [self six_swizzleMethods:object_getClass(cla) originalSelector:origSel swizzledSelector:swizSel];
-}
 
 
 @end

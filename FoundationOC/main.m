@@ -10,19 +10,25 @@
 #import "Student.h"
 #import "Person.h"
 #import "MessageForwarding.h"
+#import "ARC.h"
+#import "NARC.h"
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+//        [ARC test];
+//
+//        [NARC test];
+        
         //运行时runtime
-        [Person printTestInfo];
+//        [Person printTestInfo];
         
         //消息转发解析
 //        [MessageForwarding printTestInfo];
         
         //property解析
-//        [Student printTestInfo];
+        [Student printTestInfo];
     }
     return 0;
 }

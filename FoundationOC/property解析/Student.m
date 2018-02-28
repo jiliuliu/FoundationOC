@@ -15,7 +15,10 @@
 
 @implementation Student
 
+//生成emil成员变量，getter，setter方法
 @synthesize emil;
+
+//生成_tel成员变量，getter，setter方法
 @synthesize tel = _tel;
 
 @dynamic sex;
