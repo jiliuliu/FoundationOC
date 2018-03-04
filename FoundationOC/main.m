@@ -12,24 +12,38 @@
 #import "MessageForwarding.h"
 #import "ARC.h"
 #import "NARC.h"
+#import "GCDTest.h"
+
+
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
-//        [ARC test];
-//
-//        [NARC test];
-        
-        //运行时runtime
-//        [Person printTestInfo];
-        
-        //消息转发解析
-//        [MessageForwarding printTestInfo];
-        
-        //property解析
-        [Student printTestInfo];
+        void test(void);
+        test();
     }
     return 0;
 }
+
+void test(void) {
+    GCDTest();
+    
+    //        [ARC test];
+    //
+    //        [NARC test];
+    
+    //运行时runtime
+    //        [Person printTestInfo];
+    
+    //消息转发解析
+    //        [MessageForwarding printTestInfo];
+    
+    //property解析
+    //        [Student printTestInfo];
+}
+
+
+
+
+
 

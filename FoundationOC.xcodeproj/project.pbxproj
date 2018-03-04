@@ -30,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA1AD4C2204BAFA20075E528 /* GCDTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTest.h; sourceTree = "<group>"; };
 		EA3C3FA32046521900D604FF /* ARC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARC.h; sourceTree = "<group>"; };
 		EA3C3FA42046521900D604FF /* ARC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARC.m; sourceTree = "<group>"; };
 		EA3C3FA62046620700D604FF /* NARC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NARC.h; sourceTree = "<group>"; };
@@ -101,6 +102,14 @@
 			path = runtime;
 			sourceTree = "<group>";
 		};
+		EAB1C1A820479CCD00FBE09D /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				EA1AD4C2204BAFA20075E528 /* GCDTest.h */,
+			);
+			path = "多线程";
+			sourceTree = "<group>";
+		};
 		EAEF6E801F4497140089827F = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EAEF6E8C1F4497140089827F /* main.m */,
+				EAB1C1A820479CCD00FBE09D /* 多线程 */,
 				EA3C3FA22046516800D604FF /* 内存管理 */,
 				EA410B4D2004E88D0092C9BF /* runtime */,
 				EA410B4C2004E1B10092C9BF /* 消息转发 */,
